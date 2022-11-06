@@ -1,0 +1,100 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+body {
+	font-family: sans-serif;
+	font-size: 14px;
+}
+h1{
+	margin-top:100px;
+}
+img{
+	border-radius:50%;
+}
+h1,h2{
+	text-align:center;
+}
+p{
+	text-align:center;
+	padding:5px 20px;
+}
+.foto{
+	margin-top:20px;
+}
+.tym{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:center;
+}
+.zena{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	margin:10px;
+	height:300px;
+	width:300px;
+	border-style:solid;
+	border-radius:5px;
+	border-color: rgb(152, 210, 236)
+}
+.vlastnosti{
+	display:flex;
+	flex-direction:column;
+}
+@media (min-width:540px) and (max-width:959px){
+	body{
+		font-size:10px;
+	}
+	h1{ 
+		margin-top:20px;
+	}
+	h2{
+		font-size:14px;
+		margin-top:20px;
+	}
+	img{
+		height:50%;
+	}
+	.tym{
+		flex-direction:row;
+	}
+	p{
+		padding-top:none;
+	}
+	.zena{
+		border-color:rgb(152, 210, 236);
+		flex-direction:column;
+		height:100px;
+		
+	}
+	.vlastnosti{
+		display:flex;
+		flex-wrap:wrap;
+		flex-direction:column;
+		justify-content:flex-start;
+		width:190px;
+		margin:20px 0;
+	}
+	.foto{
+		display:flex;
+		padding:35px 0 0 20px;
+	}
+}
+
+@media (min-width:960px){
+	.zena{
+		border-color:rgb(152, 210, 236);
+		flex:1;
+		height:300px;
+		width:300px;
+		align-items:center;
+	}
+	img{
+		height:100%;
+	}
+	h2{
+		font-size:1.5em;
+	}
+}
